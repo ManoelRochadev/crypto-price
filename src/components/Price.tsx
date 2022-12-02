@@ -13,11 +13,11 @@ export function Price(props: CryptoProps) {
 
   useEffect(() => {
       api.get('/BTC/ticker/').then((e) => {
-        setDataBTC(e.data.ticker.last)
+        setDataBTC(parseInt(e.data.ticker.last))
       })
 
       api.get('/ETH/ticker/').then((e) => {
-        setDataETH(e.data.ticker.last)
+        setDataETH(parseInt(e.data.ticker.last))
       })
   }, [])
   return (
