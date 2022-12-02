@@ -8,8 +8,8 @@ interface CryptoProps {
 }
 
 export function Price(props: CryptoProps) {
-  const [dataBTC, setDataBTC] = useState('')
-  const [dataETH, setDataETH] = useState('')
+  const [dataBTC, setDataBTC] = useState(0)
+  const [dataETH, setDataETH] = useState(0)
 
   useEffect(() => {
       api.get('/BTC/ticker/').then((e) => {
